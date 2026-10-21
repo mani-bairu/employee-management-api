@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: emp
+  datasource:
+    url: jdbc:h2:mem:empdb
+    username: test
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+
+server:
+  port: 8080
+
+external:
+  api:
+    base-url: https://www.google.com
+    connect-timeout: 3s
+    read-timeout: 5s
